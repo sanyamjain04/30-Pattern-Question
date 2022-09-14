@@ -382,6 +382,58 @@ Print these patterns using loops:
 </details>
 
 
+<!-- que 12 --->
+
+<details>
+<summary>
+
+```
+12.  * * * * *
+      * * * *
+       * * *
+        * *
+         *
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+```
+</summary>
+
+```java
+    public static void main(String[]args) {
+        pattern12(5);
+    }
+    static void pattern12(int n) {
+        for (int row = n; row > 0; row--) {
+            int noOfSpaces = n - row;
+            for (int space = 0; space < noOfSpaces; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 0; col < row ; col++) {
+                System.out.print("* ");
+            }
+            System.out.println(" ");
+        }
+        for (int row = 0; row <= n; row++) {
+            int noOfSpaces = n - row;
+            for (int space = 0; space < noOfSpaces; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 0; col < row ; col++) {
+                System.out.print("* ");
+            }
+            System.out.println(" ");
+        }
+    }
+```
+
+</details>
+
+
+
+
 
 
 
