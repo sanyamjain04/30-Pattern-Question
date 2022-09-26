@@ -434,6 +434,171 @@ Print these patterns using loops:
 
 
 
+<!-- que 13 --->
+
+<details>
+<summary>
+
+```
+13.      *
+        * *
+       *   *
+      *     *
+     *********
+```
+</summary>
+
+```java
+    static void pattern13(int n) {
+        for (int row = 1; row <= n ; row++) {
+            for (int space = row; space <= n ; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 1; col <= (2*row -1) ;col++) {
+                if( col == 1 || row == n || col == (2 * row - 1)) {
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+```
+
+</details>
+
+
+
+<!-- que 14 --->
+
+<details>
+<summary>
+
+```
+14.  *********
+      *     *
+       *   *
+        * *
+         *
+```
+</summary>
+
+```java
+   static void pattern14(int n) {
+        for (int row = n; row  > 0; row--) {
+            int noOfSpace = n - row ;
+            for (int space = 0; space < noOfSpace; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 1; col <= 2*row-1; col++) {
+                if(col == 1 || row == n || col == 2 * row -1  ){
+                    System.out.print("*");
+                }else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+```
+
+</details>
+
+
+
+<!-- que 15 --->
+
+<details>
+<summary>
+
+```
+15.      *
+        * *
+       *   *
+      *     *
+     *       *
+      *     *
+       *   *
+        * *
+         *
+```
+</summary>
+
+```java
+    static void pattern15(int n) {
+        for (int row = 1; row <= n; row++) {
+            int noOfSpace = n - row;
+            for (int space = 0; space < noOfSpace; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 1; col <= 2*row-1; col++) {
+                if(col == 1 || col == 2* row -1){
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(" ");
+        }
+        for (int row = n-1; row > 0; row--) {
+            int noOfSpace =n - row;
+            for (int space = 0; space < noOfSpace; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 1; col <= 2*row-1; col++) {
+                if(col == 1 || col == 2* row -1){
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(" ");
+        }
+```
+
+</details>
+
+
+
+<!-- que 16 --->
+
+<details>
+<summary>
+
+```
+16.           1
+            1   1
+          1   2   1
+        1   3   3   1
+      1   4   6   4   1
+
+```
+</summary>
+
+```java
+    public static void main(String[]args) {
+        pattern16(5);
+    }
+    static void pattern16(int n) {
+        for (int row = 1; row <= 5; row++) {
+            int noOfSpace =  n -row;
+            for (int space = 0; space <= noOfSpace; space++) {
+                System.out.print(" ");
+            }
+            int c = 1;
+            for (int col = 1; col <= row; col++) {
+                System.out.print(c + " ");
+                c = c* (row - col) / col;
+            }
+            System.out.println();
+        }
+    }
+```
+
+</details>
+
 
 
 
